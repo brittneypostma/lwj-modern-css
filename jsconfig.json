@@ -3,7 +3,15 @@
 		"baseUrl": ".",
 		"paths": {
 			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": ["src/lib/*"],
+			"$components": ["src/lib/components"],
+			"$layout": ["src/lib/layout"],
+			"$utils": ["src/lib/utils"],
+			"$posts": ["src/posts"],
+			"$hooks": ["src/lib/hooks"],
+			"$api": ["src/lib/api"],
+			"$styles": ["src/lib/styles"],
+			"$stores": ["src/lib/stores"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]

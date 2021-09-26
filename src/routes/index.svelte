@@ -1,2 +1,39 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+  <article class="card card--highlight">
+    <h2>Your Weekly Score</h2>
+    <strong>57%</strong>
+    <p>Last updated: Sept. 23, 2021</p>
+  </article>
+  <article class="summary">
+    <h2>Summary</h2>
+    <dl class="layout-grid layout-grid--scrollsnap-cards">
+      <div class="card card--stats">
+        <dt><span class="chart"></span>Time on Apps</dt>
+        <dd><strong>523</strong> Minutes</dd>
+      </div>
+      <div class="card card--stats" style="--chart-id: 2">
+        <dt><span class="chart"></span>Phone Checks</dt>
+        <dd><strong>178</strong> Times</dd>
+      </div>
+      <div class="card card--stats" style="--chart-id: 3">
+        <dt><span class="chart"></span>Most Popular App</dt>
+        <dd><strong>Twitter</strong> for 280 minutes</dd>
+      </div>
+      <div class="card card--stats" style="--chart-id: 4">
+        <dt><span class="chart"></span>Top App Category</dt>
+        <dd><strong>Social</strong> for 340 minutes</dd>
+      </div>
+      <div class="card card--stats" style="--chart-id: 5">
+        <dt><span class="chart"></span>Most Active Day</dt>
+        <dd><strong>Sunday</strong> for 80 minutes</dd>
+      </div>
+      <div class="card card--stats" style="--chart-id: 6">
+        <dt><span class="chart"></span>Least Active Day</dt>
+        <dd><strong>Wednesday</strong> for 45 minutes</dd>
+      </div>
+    </dl>
+  </article>
+  
+  <style global lang="scss">
+    @import "src/lib/styles/style";
+  </style>
+  
