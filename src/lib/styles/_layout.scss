@@ -14,19 +14,37 @@
 	padding-block: var(--container-padding);
 }
 
-main {
-	> * + * {
-		margin-block-start: calc(max(4rem, 8vh));
-	}
-}
-
 .layout-grid {
-	--min: 15ch;
+	--min: 25ch;
 	--gap: 1rem;
 
 	display: grid;
 	grid-gap: var(--gap);
-	grid-template-columns: repeat(auto-fit, calc(minmax(min(100%, var(--min_)), 1fr)));
+	grid-template-columns: repeat(auto-fit, minmax(calc(min(100%, var(--min))), 1fr));
+
+	&--scrollsnap-cards {
+		@media (max-width: 60ch) and (any-hover: none) and (any-pointer: coarse) {
+			--gap: 1rem;
+
+			grid-auto-flow: column;
+			grid-template-columns: unset;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			padding-bottom: 1.25rem;
+
+			> .card {
+				scroll-snap-align: center;
+				scroll-snap-stop: always;
+				width: calc(min(25ch, 70vw));
+			}
+		}
+	}
+}
+main {
+	overflow: hidden;
+	> * + * {
+		margin-block-start: calc(max(4rem, 8vh));
+	}
 }
 
 @media (min-width: 100ch) {
